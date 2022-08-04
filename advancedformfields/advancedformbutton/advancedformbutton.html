@@ -1,0 +1,7 @@
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"
+      data-sly-call="${clientlib.css @ categories='carters.advancedformbutton'}" />
+<sly data-sly-use.button="com.adobe.cq.wcm.core.components.models.form.Button" />
+<ul class="advancedformbutton__errorDisplay" data-sly-test="${button.type == 'SUBMIT'}"></ul>
+<div class="advancedformbutton button aem-GridColumn--default--none center aem-GridColumn aem-GridColumn--default--7 aem-GridColumn--offset--default--3">
+<button type="${button.type}" class="cmp-form-button" name="${button.name}" value="${button.value}">${button.title}</button>
+</div>

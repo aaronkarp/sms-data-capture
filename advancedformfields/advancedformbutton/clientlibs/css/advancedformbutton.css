@@ -1,0 +1,15 @@
+.advancedformbutton__errorDisplay {
+  display: none;
+  border: 2px solid red;
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: #FFDFDF;
+}
+
+ul.advancedformbutton__errorDisplay li {
+  list-style-type: disc;
+  color: red;
+  font-size: 16px;
+  line-height: 1.75em;
+  margin-left: 20px;
+}

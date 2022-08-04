@@ -1,0 +1,70 @@
+.cmp-form-text, input[type='email'], input[type='input'], input[type='password'], input[type='tel'], input[type='text'] {
+    border-radius: 3px;
+    border: none;
+    box-shadow: -1px 0px 6px rgb(0 0 0 / 12%);
+}
+
+.aem-Grid.aem-Grid--default--12 > .aem-GridColumn.aem-GridColumn--offset--default--3 {
+    margin-bottom: 15px;
+}
+
+.cmp-form-options__field-label .cmp-form-options__field .cmp-form-options__field--checkbox input[type="radio"], input[type="checkbox"] {
+    display: block !important;
+    -webkit-appearance: checkbox;
+    background-image: none;
+    width: 19px;
+    background-color: #D0939D;
+}
+
+.advancedformtext .cmp-form-text input:placeholder-shown {
+    color: #444;
+}
+
+.advancedformtext .cmp-form-text input::placeholder {
+    display: block;
+    color: #444;
+    opacity: 1;
+}
+
+.advancedformtext .cmp-form-text {
+    font-family: Spartan, sans-serif;
+    font-size: 16px;
+    color: #444;
+    opacity: 0.7;
+    margin-bottom: 18px;
+}
+
+.cmp-form-options__field-description {
+    display: block;
+    position: relative;
+    left: 2em;
+    bottom: 28px;
+    font-family: Spartan, sans-serif;
+    color: #444;
+    font-size: 14px;
+    opacity: 0.7;
+}
+
+.button button[type="button"], button[type="reset"], button[type="submit"] {
+    padding: 12px 100px;
+    background-color: #D0939D;
+    color: white;
+    border-radius: 3px;
+    font-size: 17px;
+    font-weight: bold;
+    border: white;
+}
+
+.cmp-form-text__text, input[type='email'], input[type='input'], input[type='password'], input[type='tel'], input[type='text'] {
+    height: 50px;
+}
+
+.options .cmp-form-options legend.cmp-form-options__legend {
+    color: #00A9E0;
+}
+
+@media (max-width: 650px) {
+    .aem-Grid.aem-Grid--phone--12 > .aem-GridColumn.aem-GridColumn--offset--phone--3 {
+        margin-bottom: 15px;
+    }
+}

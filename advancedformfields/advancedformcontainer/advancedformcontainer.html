@@ -1,0 +1,22 @@
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"
+      data-sly-call="${clientlib.css @ categories='carters.advancedformcontainer'}" />
+<form data-sly-use.container="com.adobe.cq.wcm.core.components.models.form.Container"
+      data-sly-use.grid="com.day.cq.wcm.foundation.model.responsivegrid.ResponsiveGrid"
+      method="${container.method}" action="${container.action}" id="adv-form-${resource.path.hashCode}" name="${container.name}"
+      enctype="${container.enctype}"
+      class="cmp-form ${grid.cssClass}"
+      data-endpoint="${resource.endpoint}"
+      data-smsendpoint="${resource.smsEndpoint}"
+      data-redirect="${container.redirect @ extension='html'}"
+      data-endpointkey="${resource.endpointKey}"
+      data-path="${currentPage.path}"
+      data-shortcode="${resource.shortcode}"
+      data-messagetext="${resource.messageText}">
+    <input type="hidden" name=":formstart" value="${resource.path}"/>
+    <input type="hidden" name="_charset_" value="utf-8"/>
+    <sly data-sly-repeat.paragraph="${grid.paragraphs}"
+         data-sly-resource="${paragraph.path @ resourceType=paragraph.resourceType, decorationTagName='div', cssClassName=paragraph.cssClass}"></sly>
+    <sly data-sly-resource="${resource.path @ resourceType=container.resourceTypeForDropArea, appendPath='/*', decorationTagName='div', cssClassName='new section aem-Grid-newComponent'}"
+         data-sly-test="${wcmmode.edit || wcmmode.preview}"></sly>
+</form>
+<sly data-sly-call="${clientlib.js @ categories='carters.advancedformcontainer'}"/>

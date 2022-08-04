@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="SFMC Endpoint"
+    sling:resourceType="granite/ui/components/coral/foundation/container"
+    granite:class="action-type-dialog">
+      <items jcr:primaryType="nt:unstructured">
+          <endpoint jcr:primaryType="nt:unstructured"
+              sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+              fieldLabel="Endpoint"
+              fieldDescription="SFMC Endpoint"
+              name="./endpoint"
+              required="{Boolean}True"/>
+          <smsEndpoint jcr:primaryType="nt:unstructured"
+              sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+              fieldLabel="SMS Endpoint"
+              fieldDescription="SFMC Endpoint for SMS Signups"
+              name="./smsEndpoint"
+              required="{Boolean}False"/>
+          <endpointKey jcr:primaryType="nt:unstructured"
+              sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+              fieldLabel="Endpoint Key"
+              fieldDescription="SFMC Endpoint Key in key:keyvalue format"
+              name="./endpointKey"
+              required="{Boolean}True"/>
+          <shortcode jcr:primaryType="nt:unstructured"
+              sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+              fieldLabel="SMS Shortcode"
+              fieldDescription="Shortcode for SMS messaging"
+              name="./shortcode"
+              required="{Boolean}False"/>
+          <messageText jcr:primaryType="nt:unstructured"
+              sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+              fieldLabel="SMS Message Text"
+              fieldDescription="The text of the SMS message to be sent to the shortcode"
+              name="./messageText"
+              required="{Boolean}False"/>
+          <errorMessage jcr:primaryType="nt:unstructured"
+              sling:resourceType="granite/ui/components/foundation/form/textfield"
+              fieldLabel="Error Message"
+              fieldDescription="Error message to display if form data couldn't POST successfully to remote endpoint"
+              name="./errorMessage"/>
+      </items>
+      <granite:data
+          jcr:primaryType="nt:unstructured"
+          showhidetargetvalue="carters/components/advancedformfields/actions/rpc"
+          usesRedirect="true"/>
+</jcr:root>
